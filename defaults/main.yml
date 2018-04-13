@@ -1,0 +1,6 @@
+---
+
+apt_sources_repo_mirror: http://ftp.au.debian.org/debian/
+apt_sources_distro: stretch
+apt_sources_divisions: main
+apt_sources_include_src: true

@@ -1,0 +1,9 @@
+deb  {{ apt_sources_repo_mirror }} {{ apt_sources_distro }} {{ apt_sources_divisions }}
+{% if apt_sources_include_src %}deb-src {{ apt_sources_repo_mirror }} {{ apt_sources_distro }} {{ apt_sources_divisions }}{% endif %}
+
+deb {{ apt_sources_repo_mirror }} {{ apt_sources_distro }}-updates {{ apt_sources_divisions }}
+{% if apt_sources_include_src %}deb-src {{ apt_sources_repo_mirror }} {{ apt_sources_distro }}-updates {{ apt_sources_divisions }}{% endif %}
+
+
+deb-src http://security.debian.org/ stretch/updates {{ apt_sources_divisions }}
+{% if apt_sources_include_src %}deb-src http://security.debian.org/ {{ apt_sources_distro }}/updates {{ apt_sources_divisions }}{% endif %}
